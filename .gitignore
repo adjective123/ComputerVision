@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+venv310/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Model files (too large for GitHub)
+*.pt
+*.onnx
+*.weights
+runs/
+
+# Dataset and images (too large for GitHub)
+딸기_binary_dataset/
+딸기이미지/
+딸기\ 라벨링\ JSON/
+이미지\ 분석/
+*.zip
+
+# Test results and outputs
+batch_test_results/
+batch_test_results_*.json
+*_result*.jpg
+sahi_result*.jpg
+final_sample_result*.jpg
+sample*.jpg
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Environment variables
+.env
+

@@ -1,0 +1,26 @@
+# 딸기 OK/NG 분류 YOLO 학습 파이프라인 필수 패키지
+
+# 핵심 라이브러리
+ultralytics>=8.0.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# 데이터 처리
+numpy>=1.24.0
+opencv-python>=4.8.0
+Pillow>=10.0.0
+pandas>=2.0.0
+
+# 시각화
+matplotlib>=3.7.0
+
+# 유틸리티
+tqdm>=4.65.0
+pyyaml>=6.0
+
+# SAHI (대용량 이미지 추론)
+sahi>=0.11.0
+
+# ONNX Runtime (모델 추론)
+onnxruntime>=1.15.0
+

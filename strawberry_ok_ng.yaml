@@ -1,0 +1,12 @@
+# 딸기 OK/NG 이진 분류 데이터셋
+path: /Users/temp/내 드라이브(codejeteho123@gmail.com)/ComputerVision/딸기_binary_dataset
+# path: /content/drive/MyDrive/ComputerVision/딸기_binary_dataset
+train: images/train
+val: images/val
+
+# 클래스 설정
+nc: 2
+names: ['OK', 'NG']
+
+# 추가 설정
+save_dir: runs/detect/strawberry_ok_ng
