@@ -58,20 +58,25 @@ TRAINING_CONFIG = {
     'cls': 0.5,
     'dfl': 1.5,
     
-    # 데이터 증강
-    'hsv_h': 0.015,
-    'hsv_s': 0.7,
-    'hsv_v': 0.4,
-    'degrees': 10.0,
-    'translate': 0.1,
-    'scale': 0.5,
-    'shear': 0.0,
-    'perspective': 0.0,
-    'flipud': 0.0,
-    'fliplr': 0.5,
-    'mosaic': 1.0,
-    'mixup': 0.0,
-    'copy_paste': 0.0
+    # 데이터 증강 (색상 변화에 강건하게 설정)
+    # HSV 증강: 다양한 색상의 딸기(빨강/주황/노랑)에 대응
+    'hsv_h': 0.03,      # Hue (색상) 변화: ±3% (빨강↔주황↔노랑)
+    'hsv_s': 0.8,       # Saturation (채도) 변화: ±80%
+    'hsv_v': 0.5,       # Value (명도) 변화: ±50% (밝기 변화)
+    
+    # 기하학적 증강
+    'degrees': 15.0,    # 회전: ±15도
+    'translate': 0.15,  # 이동: ±15%
+    'scale': 0.6,       # 크기 조절: ±60%
+    'shear': 2.0,       # 전단 변환: ±2도
+    'perspective': 0.0001,  # 원근 변환
+    'flipud': 0.0,      # 상하 반전 (딸기는 방향성 있으므로 0)
+    'fliplr': 0.5,      # 좌우 반전: 50%
+    
+    # 고급 증강
+    'mosaic': 1.0,      # Mosaic 증강 (4개 이미지 결합)
+    'mixup': 0.15,      # MixUp 증강 (이미지 혼합)
+    'copy_paste': 0.1   # Copy-Paste 증강
 }
 
 # 예측 설정
