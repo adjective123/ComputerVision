@@ -11,7 +11,9 @@ venv310/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-*.ipynb
+yolo_training.ipynb
+project.ipynb
+# train_on_colab.ipynb는 포함됨
 
 # Model files (too large for GitHub)
 *.pt

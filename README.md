@@ -33,7 +33,8 @@ ComputerVision/
 │   ├── test_sahi.py                 # SAHI 기반 추론 (권장)
 │   ├── batch_test_images.py         # 배치 이미지 테스트
 │   ├── diagnose_with_sahi.py        # 오분류 진단 도구
-│   └── compare_models.py            # PyTorch vs ONNX 비교
+│   ├── compare_models.py            # PyTorch vs ONNX 비교
+│   └── visualize_augmentation.py    # 데이터 증강 시각화
 │
 ├── 📊 데이터
 │   ├── 딸기이미지/                  # 원본 이미지 (OK/NG)
@@ -47,7 +48,8 @@ ComputerVision/
 │
 └── 📄 기타
     ├── README.md                    # 이 파일
-    └── requirements.txt             # 필요 패키지
+    ├── requirements.txt             # 필요 패키지
+    └── train_on_colab.ipynb         # Google Colab 학습 노트북
 
 ```
 
@@ -70,7 +72,33 @@ pip install -r requirements.txt
 
 ## 💻 사용법
 
-### 1. 전체 파이프라인 실행
+### 🌟 Google Colab에서 학습 (권장)
+
+GPU가 없거나 빠른 학습을 원한다면 Google Colab을 사용하세요!
+
+1. **노트북 열기**: `train_on_colab.ipynb` 파일을 Google Colab에 업로드
+   - 또는 GitHub에서 직접 열기: [Open in Colab](https://colab.research.google.com/github/adjective123/ComputerVision/blob/main/train_on_colab.ipynb)
+
+2. **런타임 설정**: 런타임 > 런타임 유형 변경 > **T4 GPU** 선택
+
+3. **순서대로 실행**: 모든 셀을 순서대로 실행하면 자동으로:
+   - Google Drive 마운트
+   - 필요한 패키지 설치
+   - 프로젝트 코드 클론
+   - **데이터셋 자동 생성** (JSON → YOLO 포맷 변환)
+   - 모델 학습 (100 에포크, 약 1-2시간)
+   - 학습 결과 확인
+   - ONNX 모델 내보내기
+
+**장점:**
+- ✅ 무료 GPU 사용 (T4 GPU)
+- ✅ 빠른 학습 속도 (로컬 CPU 대비 10배 이상)
+- ✅ 데이터셋 자동 생성
+- ✅ Google Drive에 자동 저장
+
+---
+
+### 1. 전체 파이프라인 실행 (로컬)
 
 데이터 준비부터 학습, 평가까지 한 번에 실행:
 
